@@ -1,11 +1,10 @@
 import styled from "styled-components";
 
-type StyledLogoProps = {
+type StyledLogoProps =  {
     children: string
 }
 
 const StyledLogo = styled.p`
-  font-family: sans-serif;
   color: #111827;
   font-size: 30px;
   font-weight: 700;

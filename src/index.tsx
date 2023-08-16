@@ -12,7 +12,8 @@ const Global = createGlobalStyle`
   }
   
   body {
-    font-family: Inter,serif;
+    font-family: 'Inter', sans-serif;
+    color: #4B5563;
   }
   
   li {

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import Logo from "../Logo";
-import FlexContainer from "./FlexContainer";
+import FlexContainer from "../FlexContainer";
 import Container from "./Container";
-import Nav from "../Nav";
+import Nav from "./Nav";
 
 const StyledHeader = styled.header`
   height: 68px;

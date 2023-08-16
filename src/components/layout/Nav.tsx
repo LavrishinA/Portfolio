@@ -1,5 +1,5 @@
-import FlexContainer from "./layout/FlexContainer";
-import Icon from "./Icon";
+import FlexContainer from "../FlexContainer";
+import Icon from "../Icon";
 
 
 const Nav = () => {
@@ -15,8 +15,8 @@ const Nav = () => {
                 <li><a href="#">Contacts</a></li>
             </FlexContainer>
             <FlexContainer as="div" gap={22}>
+                <Icon iconId={"light-mode"}/>
                 <button>Download CV</button>
-                <Icon/>
             </FlexContainer>
         </FlexContainer>
     )

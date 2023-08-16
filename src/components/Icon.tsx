@@ -1,9 +1,18 @@
 import sprite from '../assets/images/sprite.svg'
 
-const Icon = () => {
+type IconPropsType = {
+    iconId: string
+    color?: string
+    width?: string
+    height?: string
+}
+const Icon = (props: IconPropsType) => {
     return (
-        <svg width="24px" height="24px" stroke="#4B5563" fill="none">
-            <use xlinkHref={`${sprite}#light-mode`}/>
+        <svg width={props.width || "24"}
+             height={props.height || "24"}
+             stroke={props.color || "#4B5563"}
+        >
+            <use xlinkHref={`${sprite}#${props.iconId}`}/>
         </svg>
     )
 }
