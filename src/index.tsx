@@ -14,6 +14,8 @@ const Global = createGlobalStyle`
   body {
     font-family: 'Inter', sans-serif;
     color: #4B5563;
+    font-size: 16px;
+    line-height: 24px;
   }
   
   li {

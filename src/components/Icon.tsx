@@ -6,6 +6,8 @@ type IconPropsType = {
     width?: string
     height?: string
 }
+
+
 const Icon = (props: IconPropsType) => {
     return (
         <svg width={props.width || "24"}

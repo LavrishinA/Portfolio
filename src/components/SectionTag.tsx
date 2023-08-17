@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import FlexContainer from "./FlexContainer";
 
 type StyledSectionTagProps = {
     children: string
@@ -7,8 +8,6 @@ type StyledSectionTagProps = {
 }
 
 const StyledSectionTag = styled.h2<StyledSectionTagProps>`
-  text-align: center;
-  width: 105px;
   margin: 0 auto 16px;
   padding: 4px 20px;
   font-size: 14px;
@@ -21,9 +20,9 @@ const StyledSectionTag = styled.h2<StyledSectionTagProps>`
 
 const SectionTag = (props: StyledSectionTagProps) => {
     return (
-        <>
+        <FlexContainer>
             <StyledSectionTag {...props}>{props.children}</StyledSectionTag>
-        </>
+        </FlexContainer>
     );
 };
 

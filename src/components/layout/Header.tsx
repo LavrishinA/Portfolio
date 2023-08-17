@@ -1,14 +1,12 @@
 import styled from "styled-components";
-import Logo from "../Logo";
 import FlexContainer from "../FlexContainer";
 import Container from "./Container";
+import Logo from "../Logo";
 import Nav from "./Nav";
 
 const StyledHeader = styled.header`
   height: 68px;
-  padding: 16px;
-  background-color: yellowgreen;
-  
+  padding: 16px;  
 `
 
 function Header() {

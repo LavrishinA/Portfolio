@@ -1,8 +1,12 @@
 import styled from "styled-components";
-import Container from "./Container";
 
-const StyledSection = styled(Container)`
+type StyledSectionProps = {
+    bgcolor?: string
+}
+
+const StyledSection = styled.section<StyledSectionProps>`
 padding: 96px 0;
+  background-color: ${props => props.bgcolor || "#fff"};
   
 `
 

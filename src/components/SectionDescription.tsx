@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Section from "./layout/Section";
+
 
 type SectionDescriptionProps = {
     children: string
