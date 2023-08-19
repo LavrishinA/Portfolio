@@ -14,7 +14,7 @@ const StyledFigure = styled.figure`
 
 const Skill = (props: SkillProps) => {
     return (
-        < StyledFigure>
+        <StyledFigure>
             < Icon
                 width={"64"}
                 height={"64"}

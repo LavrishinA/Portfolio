@@ -6,7 +6,8 @@ const ExperienceItemsData = [
         position: "Student",
         iconid: "itincubator",
         data: "Aug 2023 - Present",
-        link: "https://it-incubator.io/"
+        link: "https://it-incubator.io/",
+        list: ["HTML, CSS for React",]
     },
     {
         position: "Student",

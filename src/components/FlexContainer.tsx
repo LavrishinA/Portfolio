@@ -5,6 +5,7 @@ type FlexContainerProps = {
     align?: string
     justify?: string
     gap?: number
+    wrap?: string
 
 }
 
@@ -14,5 +15,7 @@ const FlexContainer = styled.div<FlexContainerProps>`
   justify-content: ${({justify}) => justify || "center"};
   align-items: ${({align}) => align || "center"};
   gap: ${({gap}) =>  `${gap}px` || 0 };
+  flex-wrap: ${({wrap}) => wrap || "no-wrap"}
+  
 `
 export default FlexContainer

@@ -1,7 +1,8 @@
 import React from 'react';
-import Icon from "./Icon";
-import FlexContainer from "./FlexContainer";
 import styled from "styled-components";
+import FlexContainer from "./FlexContainer";
+import StyledItemHeading from "./ItemHeading";
+import Icon from "./Icon";
 
 type ExperienceItemProps = {
     data?: string
@@ -11,8 +12,9 @@ type ExperienceItemProps = {
     link: string
 }
 
-const ExperienceItemContainer = styled(FlexContainer)`
-  width: 896px;
+const StyledExperienceItemContainer = styled(FlexContainer)`
+  max-width: 896px;
+  width: 100%;
   padding: 32px;
   background-color: #fff;
   border-radius: 10px;
@@ -20,19 +22,10 @@ const ExperienceItemContainer = styled(FlexContainer)`
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-
 `
 
-const ExperienceItemHeading = styled.h4`
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 28px;
-  color: #111827;
-  margin-bottom: 16px;
-`
-
-const ExperienceItemIcon = styled.figure`
-  flex-basis: 150px;
+const StyledExperienceItemIcon = styled.figure`
+  flex-basis: 20%;
   font-size: 12px;
   font-weight: 600;
   line-height: 28px;
@@ -41,7 +34,7 @@ const ExperienceItemIcon = styled.figure`
   justify-content: center;
   align-items: center;
 `
-const ExperienceItemList = styled.li`
+const StyledExperienceItemList = styled.li`
   list-style: disc inside;
 
   ::marker {
@@ -50,26 +43,27 @@ const ExperienceItemList = styled.li`
 `
 
 const StyledDataSince = styled.span`
+  white-space: nowrap;
   margin-left: auto;
 `
 const ExperienceItem = (props: ExperienceItemProps) => {
     return (
-        <ExperienceItemContainer gap={40} justify={"flex-start"} align={"flex-start"}>
-            <ExperienceItemIcon>
+        <StyledExperienceItemContainer gap={40} justify={"flex-start"} align={"flex-start"}>
+            <StyledExperienceItemIcon>
                 <a href={props.link} target="_blank">
                     <Icon width={"76"} height={"76"} iconId={props.iconid}/>
                 </a>
                 <figcaption>{props.iconid.toUpperCase()}</figcaption>
-            </ExperienceItemIcon>
+            </StyledExperienceItemIcon>
             <div>
-                <ExperienceItemHeading>{props.position}</ExperienceItemHeading>
+                <StyledItemHeading>{props.position}</StyledItemHeading>
                 {props.list &&
                     <FlexContainer as={"ul"} direction={"column"} gap={4} align={"start"}>
-                        {props.list.map((li, i) => <ExperienceItemList key={i}>{li}</ExperienceItemList>)}
+                        {props.list.map((li, i) => <StyledExperienceItemList key={i}>{li}</StyledExperienceItemList>)}
                     </FlexContainer>}
             </div>
             <StyledDataSince>{props.data || "Since Mar 2022"}</StyledDataSince>
-        </ExperienceItemContainer>
+        </StyledExperienceItemContainer>
     );
 };
 

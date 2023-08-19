@@ -1,6 +1,6 @@
 import sprite from '../assets/images/sprite.svg'
 
-type IconPropsType = {
+type IconProps = {
     iconId: string
     color?: string
     width?: string
@@ -8,7 +8,7 @@ type IconPropsType = {
 }
 
 
-const Icon = (props: IconPropsType) => {
+const Icon = (props: IconProps) => {
     return (
         <svg width={props.width || "24"}
              height={props.height || "24"}

@@ -5,7 +5,6 @@ import Logo from "../Logo";
 import Nav from "./Nav";
 
 const StyledHeader = styled.header`
-  height: 68px;
   padding: 16px;  
 `
 

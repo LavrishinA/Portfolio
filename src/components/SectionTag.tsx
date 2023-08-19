@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import FlexContainer from "./FlexContainer";
 
-type StyledSectionTagProps = {
+type SectionTagProps = {
     children: string
     color?: string
     bgcolor?: string
 }
 
-const StyledSectionTag = styled.h2<StyledSectionTagProps>`
+export const StyledSectionTag = styled.h2<SectionTagProps>`
   margin: 0 auto 16px;
   padding: 4px 20px;
   font-size: 14px;
@@ -18,7 +18,7 @@ const StyledSectionTag = styled.h2<StyledSectionTagProps>`
   border-radius: 12px;
 `
 
-const SectionTag = (props: StyledSectionTagProps) => {
+const SectionTag = (props: SectionTagProps) => {
     return (
         <FlexContainer>
             <StyledSectionTag {...props}>{props.children}</StyledSectionTag>

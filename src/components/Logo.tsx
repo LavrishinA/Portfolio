@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-type StyledLogoProps =  {
+type LogoProps =  {
     children: string
 }
 
@@ -13,10 +13,9 @@ const StyledLogo = styled.p`
   background: linear-gradient(to right, #959595 0%, #1B1B1B 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
 `
 
-const Logo = ({children}: StyledLogoProps) => {
+const Logo = ({children}: LogoProps) => {
     return <StyledLogo>{children}</StyledLogo>
 }
 
