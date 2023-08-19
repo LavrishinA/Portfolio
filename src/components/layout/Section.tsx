@@ -6,7 +6,7 @@ type StyledSectionProps = {
 
 const StyledSection = styled.section<StyledSectionProps>`
   padding: 96px 0;
-  background-color: ${props => props.bgcolor || "#fff"};
+   //background-color: ${props => props.bgcolor || "#fff"};
 
 `
 

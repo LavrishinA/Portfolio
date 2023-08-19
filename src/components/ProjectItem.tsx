@@ -24,7 +24,6 @@ const StyledProjectItemContainer = styled(FlexContainer)<ProjectItemContainerPro
   padding: 48px;
   flex-basis: 50%;
   background-color: ${props => props.background && '#F9FAFB'};
-
 `
 const StyledProjectPhoto = styled.img`
   width: 100%;
@@ -45,7 +44,7 @@ const StyledStackTag = styled(StyledSectionTag)`
 const ProjectItem = (props: ProjectItemProps) => {
 
     return (
-        <ProjectFlexContainer direction  = {props.num % 2 === 0 ? "row-reverse" : ""}>
+        <ProjectFlexContainer direction={props.num % 2 === 0 ? "row-reverse" : ""}>
             <StyledProjectItemContainer background>
                 <StyledProjectPhoto src={props.img}/>
             </StyledProjectItemContainer>

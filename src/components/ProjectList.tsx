@@ -16,9 +16,9 @@ const projectsData = [
     {
         name: "Shelter",
         img: shelter,
-        text: "A small landing page about an animal shelter. The project has a dynamic slider. Our pets page has pagination. Also used adaptive and responsive design",
+        text: "A small landing page about an animal shelter. The project has a dynamic slider. \"Our pets\" page has pagination. Also used adaptive and responsive design",
         link: "https://rolling-scopes-school.github.io/lavrishina-JSFE2023Q1/shelter/index.html",
-        stack: ["HTML", "CSS", "JavaScript", "HTML", "CSS", "JavaScript","HTML", "CSS", "JavaScript"]
+        stack: ["HTML", "CSS", "JavaScript", "Pixel Perfect"]
     },
 ]
 

@@ -11,6 +11,7 @@ import SkillList from "../SkillList";
 import ExperienceList from "../ExperienceList";
 import HeroText from "../HeroText";
 import ProjectList from "../ProjectList";
+import TestimonialsList from "../TestimonialsList";
 
 
 const Main = () => {
@@ -44,9 +45,11 @@ const Main = () => {
             </StyledSection>
 
             <StyledSection id="experience" bgcolor={"#F9FAFB"}>
-                <SectionTag>Experience</SectionTag>
-                <SectionDescription>Here is a quick summary of my experiences:</SectionDescription>
-                <ExperienceList/>
+                <Container>
+                    <SectionTag>Experience</SectionTag>
+                    <SectionDescription>Here is a quick summary of my experiences:</SectionDescription>
+                    <ExperienceList/>
+                </Container>
             </StyledSection>
 
             <StyledSection id="work">
@@ -54,6 +57,14 @@ const Main = () => {
                     <SectionTag>Work</SectionTag>
                     <SectionDescription>Some of the projects I have built:</SectionDescription>
                     <ProjectList/>
+                </Container>
+            </StyledSection>
+
+            <StyledSection id="testimonials" bgcolor={"#F9FAFB"}>
+                <Container>
+                    <SectionTag>Testimonials</SectionTag>
+                    <SectionDescription>People about me: </SectionDescription>
+                    <TestimonialsList/>
                 </Container>
             </StyledSection>
         </main>
