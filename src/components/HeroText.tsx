@@ -2,7 +2,6 @@ import React from 'react';
 import Icon from "./Icon";
 import styled from "styled-components";
 import FlexContainer from "./FlexContainer";
-import Link from "./Link"
 import SocialLinks from "./SocialLinks";
 
 const StyledGreet = styled.span`
