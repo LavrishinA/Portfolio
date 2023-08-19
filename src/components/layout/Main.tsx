@@ -12,6 +12,7 @@ import ExperienceList from "../ExperienceList";
 import HeroText from "../HeroText";
 import ProjectList from "../ProjectList";
 import TestimonialsList from "../TestimonialsList";
+import Contacts from "../Contacts";
 
 
 const Main = () => {
@@ -26,7 +27,7 @@ const Main = () => {
                 </Container>
             </StyledSection>
 
-            <StyledSection bgcolor={"#F9FAFB"}>
+            <StyledSection>
                 <Container>
                     <SectionTag>About Me</SectionTag>
                     <FlexContainer justify={"space-between"}>
@@ -44,7 +45,7 @@ const Main = () => {
                 </Container>
             </StyledSection>
 
-            <StyledSection id="experience" bgcolor={"#F9FAFB"}>
+            <StyledSection id="experience">
                 <Container>
                     <SectionTag>Experience</SectionTag>
                     <SectionDescription>Here is a quick summary of my experiences:</SectionDescription>
@@ -60,14 +61,26 @@ const Main = () => {
                 </Container>
             </StyledSection>
 
-            <StyledSection id="testimonials" bgcolor={"#F9FAFB"}>
+            <StyledSection id="testimonials">
                 <Container>
                     <SectionTag>Testimonials</SectionTag>
                     <SectionDescription>People about me: </SectionDescription>
                     <TestimonialsList/>
                 </Container>
             </StyledSection>
+
+            <StyledSection id="contacts">
+                <Container>
+                    <SectionTag>Contacts</SectionTag>
+                    <SectionDescription>
+                        What's next? Contact me if you are looking for a developer, have a question, or
+                        just want to get in touch.
+                    </SectionDescription>
+                    <Contacts/>
+                </Container>
+            </StyledSection>
         </main>
+
     );
 };
 

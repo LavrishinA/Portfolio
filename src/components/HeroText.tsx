@@ -3,6 +3,7 @@ import Icon from "./Icon";
 import styled from "styled-components";
 import FlexContainer from "./FlexContainer";
 import Link from "./Link"
+import SocialLinks from "./SocialLinks";
 
 const StyledGreet = styled.span`
   font-size: 60px;
@@ -29,10 +30,7 @@ const HeroText = () => {
                 </p>
             </div>
             <FlexContainer gap={10}> <Icon iconId={"location"}/> <span>Belarus, Homel</span></FlexContainer>
-            <FlexContainer justify={"flex-start"} gap={10} as={"ul"}>
-                <li><Link href={'https://github.com/LavrishinA'}><Icon iconId={"github"}/></Link></li>
-                <li><Link href={"https://linkedin.com/in/alexey-lavrishin"}><Icon iconId={"linkedin"}/></Link></li>
-            </FlexContainer>
+            <SocialLinks/>
         </FlexContainer>
 
     );

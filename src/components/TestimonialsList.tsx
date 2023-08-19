@@ -6,23 +6,18 @@ const testimonialsData = [
     {
         name: "John Doe",
         post: "www.xxx.com",
-        text: "Job well done! I am really impressed. He is very very good at what he does:) I would recommend Sagar and will rehire in the future for Frontend development."
+        text: "Job well done! I am really impressed. He is very very good at what he does:) I would recommend Alex and will rehire in the future for Frontend development."
     },
     {
         name: "John Doe",
         post: "www.xxx.com",
-        text: "Job well done! I am really impressed. He is very very good at what he does:) I would recommend Sagar and will rehire in the future for Frontend development."
+        text: "Job well done! I am really impressed. He is very very good at what he does:) I would recommend Alex and will rehire in the future for Frontend development."
     },
     {
         name: "John Doe",
         post: "www.xxx.com",
-        text: "Job well done! I am really impressed. He is very very good at what he does:) I would recommend Sagar and will rehire in the future for Frontend development."
-    },
-    {
-        name: "John Doe",
-        post: "www.xxx.com",
-        text: "Job well done! I am really impressed. He is very very good at what he does:) I would recommend Sagar and will rehire in the future for Frontend development."
-    },
+        text: "Job well done! I am really impressed. He is very very good at what he does:) I would recommend Alex and will rehire in the future for Frontend development."
+    }
 
 ]
 
