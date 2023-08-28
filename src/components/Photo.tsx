@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import theme from "./Theme";
 
 type PhotoProps = {
     width?: number
@@ -19,6 +20,13 @@ const StyledPhoto = styled.img<PhotoProps>`
     transform: scale(1.5);
     cursor: zoom-in;
   }
+
+  @media ${theme.media.mobile} {
+    width: 360px;
+    height: auto;
+
+    box-shadow: 0 15px 0 15px rgba(229, 231, 235, 1);
+    }
 `
 
 export default StyledPhoto

@@ -7,7 +7,7 @@ type SectionDescriptionProps = {
 
 const StyledSectionDescription = styled.p`
   margin-bottom: 48px;
-  font-size: 20px;
+  font-size: calc((100vw - 375px) / (1440 - 375) * (20 - 18) + 18px);
   font-weight: 400;
   line-height: 28px;
   text-align: center;

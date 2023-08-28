@@ -21,8 +21,8 @@ type ProjectItemContainerProps = {
 
 const StyledProjectItemContainer = styled(FlexContainer)<ProjectItemContainerProps>`
   align-self: stretch;
-  padding: 48px;
-  flex-basis: 50%;
+  padding: 12px;
+  flex-basis: 585px;
   background-color: ${props => props.background && '#F9FAFB'};
 `
 const StyledProjectPhoto = styled.img`
@@ -32,6 +32,7 @@ const StyledProjectPhoto = styled.img`
 `
 
 const ProjectFlexContainer = styled(FlexContainer)`
+  flex-wrap: wrap;
   border-radius: 12px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.06), 0 4px 3px 0 rgba(0, 0, 0, 0.07);
 `
@@ -46,7 +47,7 @@ const ProjectItem = (props: ProjectItemProps) => {
     return (
         <ProjectFlexContainer direction={props.num % 2 === 0 ? "row-reverse" : ""}>
             <StyledProjectItemContainer background>
-                <StyledProjectPhoto src={props.img}/>
+                <StyledProjectPhoto src={props.img} alt={"project screenshot"}/>
             </StyledProjectItemContainer>
             <StyledProjectItemContainer direction={"column"} align={"flex-start"} gap={24}>
                 <StyledItemHeading>{props.name}</StyledItemHeading>

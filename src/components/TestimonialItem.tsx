@@ -10,7 +10,7 @@ type TestimonailItemProps =  {
 }
 
 const StyledTestimonialCard = styled(FlexContainer)`
-  max-width: 374px;
+  flex-basis: 374px;
   padding: 48px;
   text-align: justify;
   background-color: #fff;

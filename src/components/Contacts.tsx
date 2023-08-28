@@ -6,7 +6,7 @@ import flexContainer from "./FlexContainer";
 
 const StyledContactLink = styled(flexContainer)`
   color: #111827;
-  font-size: 36px;
+  font-size:calc((100vw - 375px) / (1440 - 375) * (36 - 24) + 24px);
   font-weight: 600;
   line-height: 40px;
   letter-spacing: -0.72px;

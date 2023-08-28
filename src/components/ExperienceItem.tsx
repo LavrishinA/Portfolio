@@ -4,6 +4,7 @@ import FlexContainer from "./FlexContainer";
 import StyledItemHeading from "./ItemHeading";
 import Icon from "./Icon";
 
+
 type ExperienceItemProps = {
     data?: string
     iconid: string
@@ -22,6 +23,10 @@ const StyledExperienceItemContainer = styled(FlexContainer)`
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `
 
 const StyledExperienceItemIcon = styled.figure`
@@ -33,6 +38,10 @@ const StyledExperienceItemIcon = styled.figure`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 768px) {
+    align-self: center;
+  }
 `
 const StyledExperienceItemList = styled.li`
   list-style: disc inside;

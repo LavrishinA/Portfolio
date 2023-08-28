@@ -1,5 +1,7 @@
 import FlexContainer from "./FlexContainer";
 import Skill from "./Skill";
+import styled from "styled-components";
+import theme from "./Theme";
 
 const skillsData = [
     {
@@ -31,11 +33,19 @@ const skillsData = [
         caption: "Styled Components"
     },
 ]
+
+const StyledSkillList = styled(FlexContainer)`
+  @media ${theme.media.mobile} {
+    row-gap: 32px;
+  }
+`
+
+
 const SkillList = () => {
     return (
-        <FlexContainer justify={"space-around"}>
-            {skillsData.map(props =>  <Skill key={props.iconid} {...props}/>)}
-        </FlexContainer>
+        <StyledSkillList justify={"space-between"} wrap={"wrap"}>
+            {skillsData.map(props => <Skill key={props.iconid} {...props}/>)}
+        </StyledSkillList>
     );
 };
 

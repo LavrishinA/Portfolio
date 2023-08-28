@@ -17,6 +17,7 @@ const Global = createGlobalStyle`
     color: #4B5563;
     font-size: 16px;
     line-height: 24px;
+    
   }
 
   ul {
