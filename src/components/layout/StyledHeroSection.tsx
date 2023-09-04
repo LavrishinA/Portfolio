@@ -6,8 +6,7 @@ import HeroText from "../HeroText";
 import styled from "styled-components";
 import theme from "../Theme";
 import photoavatar from "../../assets/images/photovatar.png";
-
-
+import {CommonProps} from "../CommonProps";
 
 const StyledHeroContent = styled(FlexContainer)`
   
@@ -16,12 +15,12 @@ const StyledHeroContent = styled(FlexContainer)`
    }
 `
 
-const HeroSection = () => {
+const HeroSection = (props: CommonProps) => {
     return (
         <StyledSection id="hero">
             <Container>
                 <StyledHeroContent gap={124} justify={"space-between"} >
-                    <HeroText/>
+                    <HeroText {...props}/>
                     <StyledPhoto width={280} height={320} src={photoavatar} alt={"my photo"}/>
                 </StyledHeroContent>
             </Container>

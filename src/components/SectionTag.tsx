@@ -13,7 +13,6 @@ export const StyledSectionTag = styled.h2<SectionTagProps>`
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
-  color: ${props => props.color || "#4B5563"};
   background-color: ${props => props.bgcolor || "#E5E7EB"};
   border-radius: 12px;
 `

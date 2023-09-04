@@ -3,6 +3,8 @@ import Icon from "./Icon";
 import styled from "styled-components";
 import FlexContainer from "./FlexContainer";
 import SocialLinks from "./SocialLinks";
+import {CommonProps} from "./CommonProps";
+import theme from "./Theme";
 
 const StyledGreet = styled.span`
   font-size: calc((100vw - 375px) / (1440 - 375) * (60 - 36) + 36px);
@@ -22,7 +24,7 @@ const StyledText = styled.p`
   text-align: justify;
 `
 
-const HeroText = () => {
+const HeroText = (props: CommonProps) => {
     return (
         <FlexContainer direction={"column"} align={"flex-start"} gap={32}>
             <div>
@@ -35,8 +37,8 @@ const HeroText = () => {
                     efficitur.
                 </StyledText>
             </div>
-            <FlexContainer gap={10}> <Icon iconId={"location"}/> <span>Belarus, Homel</span></FlexContainer>
-            <SocialLinks/>
+            <FlexContainer gap={10}> <Icon color={theme[props.currentTheme].svgStroke} iconId={"location"}/> <span>Belarus, Homel</span></FlexContainer>
+            <SocialLinks {...props}/>
         </FlexContainer>
 
     );

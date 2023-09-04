@@ -12,18 +12,26 @@ type ProjectItemProps = {
     link: string
     stack: string[]
     num: number
+    stackBg?: string
+    iconColor?: string
+    itemBg?: string
+    projectBgSecondary?: string
 }
 
 
 type ProjectItemContainerProps = {
     background?: boolean
+    itemBg?: string
+    projectBgSecondary?: string
+
 }
 
 const StyledProjectItemContainer = styled(FlexContainer)<ProjectItemContainerProps>`
   align-self: stretch;
   padding: 12px;
   flex-basis: 585px;
-  background-color: ${props => props.background && '#F9FAFB'};
+  background-color: ${props =>  props.background && props.itemBg || props.projectBgSecondary};
+  border-radius: 5px;
 `
 const StyledProjectPhoto = styled.img`
   width: 100%;
@@ -46,19 +54,19 @@ const ProjectItem = (props: ProjectItemProps) => {
 
     return (
         <ProjectFlexContainer direction={props.num % 2 === 0 ? "row-reverse" : ""}>
-            <StyledProjectItemContainer background>
+            <StyledProjectItemContainer projectBgSecondary={props.projectBgSecondary} background itemBg={props.itemBg}>
                 <StyledProjectPhoto src={props.img} alt={"project screenshot"}/>
             </StyledProjectItemContainer>
-            <StyledProjectItemContainer direction={"column"} align={"flex-start"} gap={24}>
-                <StyledItemHeading>{props.name}</StyledItemHeading>
+            <StyledProjectItemContainer projectBgSecondary={props.projectBgSecondary} direction={"column"} align={"flex-start"} gap={24}>
+                <StyledItemHeading >{props.name}</StyledItemHeading>
                 <p>
                     {props.text}
                 </p>
                 <FlexContainer justify={"flex-start"} gap={8} wrap={"wrap"} as={"ul"}>
-                    {props.stack.map(li => <StyledStackTag>{li}</StyledStackTag>)}
+                    {props.stack.map((li, i) => <StyledStackTag bgcolor={props.stackBg} key={i}>{li}</StyledStackTag>)}
                 </FlexContainer>
                 <Link href={props.link}>
-                    <Icon iconId={"link"}/>
+                    <Icon color={props.iconColor} iconId={"link"}/>
                 </Link>
             </StyledProjectItemContainer>
         </ProjectFlexContainer>

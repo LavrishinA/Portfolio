@@ -3,9 +3,11 @@ import Nav from "./Nav";
 import Icon from "../Icon";
 import styled from "styled-components";
 import theme from "../Theme";
+import {CommonProps} from "../CommonProps";
 
 type MobileNavProps = {
-    open: boolean;
+    open: boolean
+    bgNavColor?: string
 }
 
 
@@ -13,7 +15,8 @@ const StyledMobileNav = styled.nav<MobileNavProps>`
   display: none;
   height: 100vh;
   width: 100%;
-  background-color: rgba(249, 250, 251, 0.9);
+  background-color: ${props => props.bgNavColor};
+  opacity: .8;
   transition: all .3s ease;
 
   @media ${theme.media.mobile} {
@@ -39,7 +42,7 @@ const StyledBurger = styled.button`
     display: block;
   }
 `
-const MobileNav = () => {
+const MobileNav = (props: CommonProps) => {
     const [openNav, setOpenNav] = useState(false);
 
     function handleBurgerClick() {
@@ -49,7 +52,7 @@ const MobileNav = () => {
 
     return (
         <>
-            <StyledMobileNav open={openNav}><Nav/></StyledMobileNav>
+            <StyledMobileNav bgNavColor={theme[props.currentTheme].primaryBg} open={openNav}><Nav {...props} /></StyledMobileNav>
             <StyledBurger onClick={handleBurgerClick}>
                 <Icon iconId={openNav ? "menuclose" : "menu"}/>
             </StyledBurger>

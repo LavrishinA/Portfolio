@@ -7,13 +7,18 @@ type TestimonailItemProps =  {
     name: string
     post: string
     text: string
+    background?: string
 }
 
-const StyledTestimonialCard = styled(FlexContainer)`
+type StyledTestimonialCardProps = {
+    background?: string
+}
+
+const StyledTestimonialCard = styled(FlexContainer)<StyledTestimonialCardProps>`
   flex-basis: 374px;
   padding: 48px;
   text-align: justify;
-  background-color: #fff;
+  background-color: ${props => props.background};
   border-radius: 12px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.06), 0 4px 3px 0 rgba(0, 0, 0, 0.07);
 `
@@ -36,7 +41,7 @@ const StyledFigure = styled.figure`
 
 const TestimonialItem = (props: TestimonailItemProps) => {
     return (
-        <StyledTestimonialCard direction={"column"} justify={"space-between"} gap={24}>
+        <StyledTestimonialCard background={props.background} direction={"column"} justify={"space-between"} gap={24}>
             <StyledUserICon src={usericon}/>
             <p>
                 {props.text}

@@ -1,6 +1,7 @@
 import FlexContainer from "./FlexContainer";
 import ExperienceItem from "./ExperienceItem";
 
+
 const ExperienceItemsData = [
     {
         position: "Student",
@@ -35,11 +36,16 @@ const ExperienceItemsData = [
     }
 ]
 
+type ItemBgProps = {
+    itemBg: string
+    headingColor: string
+}
 
-const ExperienceList = () => {
+const ExperienceList = ({itemBg, headingColor}: ItemBgProps) => {
     return (
         <FlexContainer direction={"column"} gap={48}>
-            {ExperienceItemsData.map(props => <ExperienceItem key={props.iconid} {...props}/>)}
+            {ExperienceItemsData.map(props => <ExperienceItem key={props.iconid} {...props} itemBg={itemBg}
+                                                              headingColor={headingColor}/>)}
         </FlexContainer>
     );
 };

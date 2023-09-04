@@ -4,6 +4,7 @@ import Container from "./Container";
 import Logo from "../Logo";
 import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
+import {CommonProps} from "../CommonProps";
 import theme from "../Theme";
 
 
@@ -15,14 +16,15 @@ const StyledHeader = styled.header`
   }
 `
 
-function Header() {
+function Header(props: CommonProps) {
     return (
         <StyledHeader>
             <Container>
                 <FlexContainer justify="space-between">
                     <Logo>{`<AL />`}</Logo>
-                    <DesktopNav/>
-                    <MobileNav/>
+
+                    <DesktopNav {...props}/>
+                    <MobileNav {...props}/>
                 </FlexContainer>
             </Container>
         </StyledHeader>

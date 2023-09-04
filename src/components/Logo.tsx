@@ -10,7 +10,7 @@ const StyledLogo = styled.p`
   font-weight: 700;
   line-height: 36px;
  
-  background: linear-gradient(to right, #959595 0%, #1B1B1B 100%);
+  background: linear-gradient(to right, #959595 0%, #10B981 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `

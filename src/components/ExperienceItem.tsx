@@ -5,19 +5,28 @@ import StyledItemHeading from "./ItemHeading";
 import Icon from "./Icon";
 
 
+
 type ExperienceItemProps = {
     data?: string
     iconid: string
     position: string
     list?: string[]
     link: string
+    itemBg?: string
+    headingColor?: string
+
 }
 
-const StyledExperienceItemContainer = styled(FlexContainer)`
+type ItemContainerProps = {
+    itemBg?: string
+}
+
+
+const StyledExperienceItemContainer = styled(FlexContainer)<ItemContainerProps>`
   max-width: 896px;
   width: 100%;
   padding: 32px;
-  background-color: #fff;
+  background-color: ${props => props.itemBg || "#FFFFFF"};
   border-radius: 10px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.06), 0 4px 3px 0 rgba(0, 0, 0, 0.07);
   font-size: 16px;
@@ -57,7 +66,7 @@ const StyledDataSince = styled.span`
 `
 const ExperienceItem = (props: ExperienceItemProps) => {
     return (
-        <StyledExperienceItemContainer gap={40} justify={"flex-start"} align={"flex-start"}>
+        <StyledExperienceItemContainer itemBg={props.itemBg} gap={40} justify={"flex-start"} align={"flex-start"}>
             <StyledExperienceItemIcon>
                 <a href={props.link} target="_blank">
                     <Icon width={"76"} height={"76"} iconId={props.iconid}/>
@@ -65,7 +74,7 @@ const ExperienceItem = (props: ExperienceItemProps) => {
                 <figcaption>{props.iconid.toUpperCase()}</figcaption>
             </StyledExperienceItemIcon>
             <div>
-                <StyledItemHeading>{props.position}</StyledItemHeading>
+                <StyledItemHeading color={props.headingColor}>{props.position}</StyledItemHeading>
                 {props.list &&
                     <FlexContainer as={"ul"} direction={"column"} gap={4} align={"start"}>
                         {props.list.map((li, i) => <StyledExperienceItemList key={i}>{li}</StyledExperienceItemList>)}

@@ -1,6 +1,7 @@
 import Nav from "./Nav";
 import styled from "styled-components";
 import theme from "../Theme";
+import {CommonProps} from "../CommonProps";
 
 const StyledDesktopNav = styled.nav`
 
@@ -8,11 +9,14 @@ const StyledDesktopNav = styled.nav`
     display: none;
   }
 `
-const DesktopNav = () => {
+type HeaderProps = {
+    onSwitchTheme: () => void
+}
+const DesktopNav = (props: CommonProps) => {
 
     return (
         <StyledDesktopNav>
-            <Nav/>
+            <Nav {...props}/>
         </StyledDesktopNav>
     )
 }

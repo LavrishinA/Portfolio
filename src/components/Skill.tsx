@@ -11,11 +11,10 @@ const StyledFigure = styled.figure`
   text-align: center;
   font-size: 18px;
   line-height: 28px;
-
+  
 
   @media ${theme.media.mobile} {
     flex-basis: 33%;
-    
   }
 `
 

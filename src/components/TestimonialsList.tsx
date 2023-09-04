@@ -20,10 +20,16 @@ const testimonialsData = [
     },
 ]
 
-const TestimonialsList = () => {
+
+type ItemBgProps = {
+    itemBg?: string
+}
+
+
+const TestimonialsList = ({itemBg}: ItemBgProps) => {
     return (
         <FlexContainer justify={"center"}  wrap={"wrap"} gap={24}>
-            {testimonialsData.map(props => <TestimonialItem {...props}/>)}
+            {testimonialsData.map((props, i) => <TestimonialItem {...props} background={itemBg}  key={i}/>)}
         </FlexContainer>
     );
 };

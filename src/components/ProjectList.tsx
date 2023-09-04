@@ -22,11 +22,19 @@ const projectsData = [
     },
 ]
 
+type ItemProps = {
+    stackBg: string
+    iconColor: string
+    secondaryBg: string
+    projectBgSecondary: string
+}
 
-const ProjectList = () => {
+const ProjectList = ({stackBg, iconColor, secondaryBg, projectBgSecondary}: ItemProps) => {
     return (
         <FlexContainer direction={"column"} gap={48}>
-            {projectsData.map((props, i) => <ProjectItem {...props} num = {i + 1}/>)}
+            {projectsData.map((props, i) => <ProjectItem {...props} num={i + 1} key={i} itemBg={secondaryBg}
+                                                         stackBg={stackBg} iconColor={iconColor}
+                                                         projectBgSecondary={projectBgSecondary}/>)}
         </FlexContainer>
     );
 };

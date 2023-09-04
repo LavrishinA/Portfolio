@@ -10,18 +10,20 @@ import TestimonialsList from "../TestimonialsList";
 import Contacts from "../Contacts";
 import HeroSection from "./StyledHeroSection";
 import AboutSection from "./StyledAboutSection";
+import {CommonProps} from "../CommonProps";
+import theme from "../Theme";
 
 
-const Main = () => {
+const Main = (props: CommonProps) => {
     return (
         <main>
-            <HeroSection/>
+            <HeroSection  {...props}/>
 
-            <AboutSection/>
+            <AboutSection {...props}/>
 
             <StyledSection id="skills">
                 <Container>
-                    <SectionTag>Skills</SectionTag>
+                    <SectionTag bgcolor={theme[props.currentTheme].sectionTagBg}>Skills</SectionTag>
                     <SectionDescription>The skills, tools and technologies I am own:</SectionDescription>
                     <SkillList/>
                 </Container>
@@ -29,36 +31,41 @@ const Main = () => {
 
             <StyledSection id="experience">
                 <Container>
-                    <SectionTag>Experience</SectionTag>
+                    <SectionTag bgcolor={theme[props.currentTheme].sectionTagBg}>Experience</SectionTag>
                     <SectionDescription>Here is a quick summary of my experiences:</SectionDescription>
-                    <ExperienceList/>
+                    <ExperienceList itemBg={theme[props.currentTheme].itemBg}
+                                    headingColor={theme[props.currentTheme].h4color}/>
                 </Container>
             </StyledSection>
 
             <StyledSection id="work">
                 <Container>
-                    <SectionTag>Work</SectionTag>
+                    <SectionTag bgcolor={theme[props.currentTheme].sectionTagBg}>Work</SectionTag>
                     <SectionDescription>Some of the projects I have built:</SectionDescription>
-                    <ProjectList/>
+                    <ProjectList secondaryBg={theme[props.currentTheme].secondaryBg}
+                                 stackBg={theme[props.currentTheme].sectionTagBg}
+                                 iconColor={theme[props.currentTheme].svgStroke}
+                                 projectBgSecondary={theme[props.currentTheme].projectItemColorSecondary}
+                    />
                 </Container>
             </StyledSection>
 
             <StyledSection id="testimonials">
                 <Container>
-                    <SectionTag>Testimonials</SectionTag>
+                    <SectionTag bgcolor={theme[props.currentTheme].sectionTagBg}>Testimonials</SectionTag>
                     <SectionDescription>People about me: </SectionDescription>
-                    <TestimonialsList/>
+                    <TestimonialsList itemBg={theme[props.currentTheme].itemBg}/>
                 </Container>
             </StyledSection>
 
             <StyledSection id="contacts">
                 <Container>
-                    <SectionTag>Contacts</SectionTag>
+                    <SectionTag bgcolor={theme[props.currentTheme].sectionTagBg}>Contacts</SectionTag>
                     <SectionDescription>
                         What's next? Contact me if you are looking for a developer, have a question, or
                         just want to get in touch.
                     </SectionDescription>
-                    <Contacts/>
+                    <Contacts {...props}/>
                 </Container>
             </StyledSection>
         </main>

@@ -4,7 +4,7 @@ import styled from "styled-components";
   font-size: calc((100vw - 375px) / (1440 - 375) * (20 - 18) + 18px);
   font-weight: 600;
   line-height: 28px;
-  color: #111827;
+  color: ${props => props.color};
   margin-bottom: 16px;
 `
 export default StyledItemHeading
