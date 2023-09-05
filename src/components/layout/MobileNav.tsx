@@ -19,12 +19,13 @@ const StyledMobileNav = styled.nav<MobileNavProps>`
   opacity: .8;
   transition: all .3s ease;
 
+
   @media ${theme.media.mobile} {
     position: fixed;
     right: ${props => props.open ? "0" : "-100%"};
     top: 100px;
     display: block;
-    
+
     ul {
       flex-direction: column;
     }
@@ -32,7 +33,10 @@ const StyledMobileNav = styled.nav<MobileNavProps>`
     div {
       flex-direction: column;
     }
+
+
   }
+
 
 `
 
@@ -52,7 +56,12 @@ const MobileNav = (props: CommonProps) => {
 
     return (
         <>
-            <StyledMobileNav bgNavColor={theme[props.currentTheme].primaryBg} open={openNav}><Nav {...props} /></StyledMobileNav>
+            <StyledMobileNav bgNavColor={theme[props.currentTheme].primaryBg} open={openNav}>
+                <Nav {...props} closeNav={() => {
+                    setOpenNav(false)
+                    document.body.style.overflow = `${openNav ? "" : "hidden"}`
+                }}/>
+            </StyledMobileNav>
             <StyledBurger onClick={handleBurgerClick}>
                 <Icon iconId={openNav ? "menuclose" : "menu"}/>
             </StyledBurger>

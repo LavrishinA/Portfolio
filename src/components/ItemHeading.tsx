@@ -6,5 +6,7 @@ import styled from "styled-components";
   line-height: 28px;
   color: ${props => props.color};
   margin-bottom: 16px;
+
+
 `
 export default StyledItemHeading

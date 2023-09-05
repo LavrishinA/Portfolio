@@ -19,6 +19,9 @@ const Global = createGlobalStyle<ThemeProps>`
     padding: 0;
     box-sizing: border-box;
   }
+  html {
+    scroll-behavior: smooth;
+  }
 
   body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -29,6 +32,7 @@ const Global = createGlobalStyle<ThemeProps>`
     line-height: 24px;
     min-width: 360px;
     transition: all .3s;
+   
   }
 
   ul {

@@ -23,6 +23,10 @@ const StyledStatus = styled.p`
   }
 `
 
+const StyledBgVideo = styled.div`
+    
+`
+
 const Contacts = (props: CommonProps) => {
     return (
         <FlexContainer direction={"column"} gap={48}>

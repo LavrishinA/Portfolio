@@ -16,10 +16,16 @@ const StyledPhoto = styled.img<PhotoProps>`
   padding: 8px;
   box-shadow: ${props => props.shadowLeft ? "-30px 30px 0 0 rgba(229, 231, 235, 1)" : "30px 30px 0 0 rgba(229, 231, 235, 1)"};
   transition: all .3s ease-in-out;
-  :hover {
-    transform: scale(1.5);
-    cursor: zoom-in;
+
+  @media screen and (min-width: 1140px) {
+    transition: .3s ease;
+
+    &:hover {
+      transform: scale(1.5);
+      cursor: zoom-in;
+    }
   }
+
 
   @media ${theme.media.mobile} {
     width: 360px;

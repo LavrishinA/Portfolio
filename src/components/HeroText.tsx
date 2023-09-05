@@ -1,10 +1,22 @@
 import React from 'react';
 import Icon from "./Icon";
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 import FlexContainer from "./FlexContainer";
 import SocialLinks from "./SocialLinks";
 import {CommonProps} from "./CommonProps";
 import theme from "./Theme";
+
+const MyAnimation = keyframes`
+
+  0% {
+    transform: rotate(0deg);
+  }
+ 50% {
+    transform: rotate(20deg);
+  }
+  
+
+`
 
 const StyledGreet = styled.span`
   font-size: calc((100vw - 375px) / (1440 - 375) * (60 - 36) + 36px);
@@ -13,9 +25,16 @@ const StyledGreet = styled.span`
   line-height: 72px;
   letter-spacing: -1.2px;
   white-space: nowrap;
+  z-index: -1;
+ & span {
+   display: inline-block;
+   transform-origin: 75% 100%;
+   animation: ${MyAnimation} 1.5s infinite;
+ }
 `
 
 const StyledHeroHeading = styled.h1`
+  line-height: 1.1;
   font-size: calc((100vw - 375px) / (1440 - 375) * (36 - 24) + 24px);
   margin-bottom: 22px;
 `

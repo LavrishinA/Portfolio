@@ -1,5 +1,6 @@
 
 export type CommonProps = {
-    onSwitchTheme?: () => void,
+    onSwitchTheme?: () => void
     currentTheme: "light" | "dark"
+    closeNav?: () => void
 }

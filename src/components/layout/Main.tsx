@@ -13,6 +13,7 @@ import AboutSection from "./StyledAboutSection";
 import {CommonProps} from "../CommonProps";
 import theme from "../Theme";
 
+import Backgroundvideo from "./Backgroundvideo";
 
 const Main = (props: CommonProps) => {
     return (
@@ -58,7 +59,8 @@ const Main = (props: CommonProps) => {
                 </Container>
             </StyledSection>
 
-            <StyledSection id="contacts">
+            <StyledSection id="contacts" style={{position: "relative", opacity: 0.99}}>
+                <Backgroundvideo/>
                 <Container>
                     <SectionTag bgcolor={theme[props.currentTheme].sectionTagBg}>Contacts</SectionTag>
                     <SectionDescription>

@@ -8,7 +8,7 @@ import React, {useState} from "react";
 
 function App() {
 // debugger
-    const [theme, setTheme] = useState<"light" | "dark">("light")
+    const [theme, setTheme] = useState<"light" | "dark">("dark")
 
     function handleSwitchTheme () {
         theme === "light" ? setTheme("dark") : setTheme("light")

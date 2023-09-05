@@ -8,6 +8,7 @@ type StyledSectionProps = {
 
 const StyledSection = styled.section<StyledSectionProps>`
   padding: 96px 0;
+  //position: relative;
 
   @media ${theme.media.mobile} {
     padding: 64px 0;
