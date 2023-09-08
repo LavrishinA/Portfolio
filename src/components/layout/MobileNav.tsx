@@ -18,7 +18,7 @@ const StyledMobileNav = styled.nav<MobileNavProps>`
   background-color: ${props => props.bgNavColor};
   opacity: .8;
   transition: all .3s ease;
-
+  z-index: 100;
 
   @media ${theme.media.mobile} {
     position: fixed;

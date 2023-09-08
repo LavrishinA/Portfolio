@@ -14,10 +14,12 @@ import {CommonProps} from "../CommonProps";
 import theme from "../Theme";
 
 import Backgroundvideo from "./Backgroundvideo";
+import ProgressScrollBar from "../ProgressScrollBar/ProgressScrollBar";
 
 const Main = (props: CommonProps) => {
     return (
         <main>
+            <ProgressScrollBar/>
             <HeroSection  {...props}/>
 
             <AboutSection {...props}/>

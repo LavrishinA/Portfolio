@@ -25,11 +25,12 @@ const StyledGreet = styled.span`
   line-height: 72px;
   letter-spacing: -1.2px;
   white-space: nowrap;
-  z-index: -1;
+
  & span {
    display: inline-block;
    transform-origin: 75% 100%;
    animation: ${MyAnimation} 1.5s infinite;
+
  }
 `
 
